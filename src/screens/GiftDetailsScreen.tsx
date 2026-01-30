@@ -25,14 +25,30 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
                 </div>
             </header>
             <main className="flex-1 max-w-md mx-auto w-full">
-                <div className="px-0 md:px-4 md:pt-4">
-                    <div
-                        className="w-full bg-center bg-no-repeat bg-cover aspect-square md:rounded-lg shadow-inner"
-                        style={{ backgroundImage: `url("${gift.imageUrl}")` }}
-                    />
+                <div className="px-0 relative">
+                    <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4">
+                        {(gift.images && gift.images.length > 0 ? gift.images : [gift.imageUrl]).slice(0, 3).map((img, index) => (
+                            <div key={index} className="flex-none w-[85%] first:ml-6 last:mr-6 mr-4 snap-center">
+                                <div
+                                    className="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-lg shadow-md"
+                                    style={{ backgroundImage: `url("${img}")` }}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className="px-6 pt-8">
-                    <h1 className="text-3xl font-medium tracking-tight leading-tight mb-2 serif-title text-neutral-900 dark:text-neutral-50">{gift.name}</h1>
+                <div className="px-6 pt-4">
+                    <h1 className="text-3xl font-medium tracking-tight leading-tight mb-4 serif-title text-neutral-900 dark:text-neutral-50">{gift.name}</h1>
+
+                    {gift.color && (
+                        <div className="flex items-center gap-2 mb-6">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">Cor</span>
+                            <span className="bg-black text-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-[3px]">
+                                {gift.color}
+                            </span>
+                        </div>
+                    )}
+
                     <div className="h-[1px] w-full bg-neutral-200 dark:bg-neutral-800 my-8" />
                 </div>
                 <div className="px-6">

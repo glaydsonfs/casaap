@@ -3,6 +3,8 @@ export interface Gift {
     id: string;
     name: string;
     imageUrl: string;
+    images?: string[];
+    color?: string;
     category: string;
     reservedBy?: string;
     reservationMessage?: string;
