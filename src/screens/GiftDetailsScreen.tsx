@@ -14,6 +14,14 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
     const isAlreadyReservedByMe = gift.reservedBy === userEmail;
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const scrollRef = React.useRef<HTMLDivElement>(null);
+    const containerRef = React.useRef<HTMLDivElement>(null);
+
+    // Ensure we start at the top of the details
+    React.useEffect(() => {
+        if (containerRef.current) {
+            containerRef.current.scrollTop = 0;
+        }
+    }, [gift.id]);
 
     const giftImages = (gift.images && gift.images.length > 0) ? gift.images : [gift.imageUrl];
     const displayImages = giftImages.slice(0, 3);
@@ -28,7 +36,10 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
     };
 
     return (
-        <div className="flex flex-col h-full bg-background-light dark:bg-background-dark overflow-y-auto pb-40">
+        <div
+            ref={containerRef}
+            className="flex flex-col h-full bg-background-light dark:bg-background-dark overflow-y-auto pb-40"
+        >
             <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
                 <div className="flex items-center p-4 justify-between max-w-md mx-auto w-full text-primary dark:text-white">
                     <button onClick={onBack} className="flex items-center justify-center">
@@ -38,7 +49,7 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
                     <div className="w-6"></div>
                 </div>
             </header>
-            <main className="flex-1 max-w-md mx-auto w-full">
+            <main className="flex-1 max-w-md mx-auto w-full pt-6">
                 <div className="px-0 relative mb-4">
                     <div
                         ref={scrollRef}
@@ -52,7 +63,7 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
                                 className="flex-none w-[82%] first:ml-6 last:mr-6 mr-3 snap-center"
                             >
                                 <div
-                                    className="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-lg shadow-md border border-neutral-100 dark:border-neutral-800"
+                                    className="w-full aspect-square bg-center bg-no-repeat bg-contain bg-white dark:bg-neutral-800 rounded-lg shadow-md border border-neutral-100 dark:border-neutral-800"
                                     style={{ backgroundImage: `url("${img}")` }}
                                 />
                             </div>
