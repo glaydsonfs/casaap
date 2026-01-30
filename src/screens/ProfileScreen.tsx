@@ -33,7 +33,6 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({ user, onLogout, us
                                         <div className="size-16 rounded-sm bg-cover bg-center border border-neutral-200" style={{ backgroundImage: `url("${gift.imageUrl}")` }} />
                                         <div className="flex-1 min-w-0">
                                             <p className="text-sm font-bold text-neutral-900 dark:text-neutral-100 truncate font-serif">{gift.name}</p>
-                                            <p className="text-[10px] font-extrabold text-neutral-600">R$ {gift.price.toFixed(2).replace('.', ',')}</p>
                                         </div>
                                     </div>
                                     {gift.reservationMessage && (

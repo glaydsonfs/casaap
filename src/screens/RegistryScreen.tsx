@@ -34,10 +34,10 @@ export const RegistryScreen: React.FC<RegistryScreenProps> = ({ gifts, onSelect,
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 px-4">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-10 px-4">
                 {gifts.length > 0 ? (
                     gifts.map((gift) => (
-                        <div key={gift.id} className={`flex flex-col gap-2 h-full ${gift.reservedBy ? 'opacity-50' : ''}`}>
+                        <div key={gift.id} className={`flex flex-col gap-3 h-full ${gift.reservedBy ? 'opacity-50' : ''}`}>
                             <div
                                 onClick={() => !gift.reservedBy && onSelect(gift)}
                                 className="group relative aspect-square overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm cursor-pointer"
@@ -52,13 +52,12 @@ export const RegistryScreen: React.FC<RegistryScreenProps> = ({ gifts, onSelect,
                                     </div>
                                 )}
                             </div>
-                            <div className="flex flex-col gap-1 px-0.5 flex-1">
-                                <h3 className={`text-neutral-900 dark:text-neutral-100 text-[13px] font-bold serif-title leading-snug ${gift.reservedBy ? 'italic' : ''}`}>{gift.name}</h3>
-                                <p className="text-neutral-900 dark:text-neutral-200 text-[12px] font-extrabold">R$ {gift.price.toFixed(2).replace('.', ',')}</p>
+                            <div className="flex flex-col px-0.5 flex-1">
+                                <h3 className={`text-neutral-900 dark:text-neutral-100 text-[16px] font-bold serif-title leading-tight mb-4 ${gift.reservedBy ? 'italic opacity-70' : ''}`}>{gift.name}</h3>
                                 {!gift.reservedBy && (
                                     <button
                                         onClick={() => onSelect(gift)}
-                                        className="mt-auto flex w-full cursor-pointer items-center justify-center rounded-sm py-2 px-2 bg-primary text-white text-[9px] font-bold uppercase tracking-wider transition-transform active:scale-[0.98]"
+                                        className="mt-auto flex w-full cursor-pointer items-center justify-center rounded-sm py-3 px-2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest transition-transform active:scale-[0.98] shadow-md"
                                     >
                                         Vou dar este!
                                     </button>

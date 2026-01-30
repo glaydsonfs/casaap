@@ -31,7 +31,6 @@ export default function App() {
                 const mappedGifts: Gift[] = data.map((g: any) => ({
                     id: g.id,
                     name: g.name,
-                    price: Number(g.price),
                     imageUrl: g.image_url,
                     category: g.category,
                     reservedBy: g.reserved_by,

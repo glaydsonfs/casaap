@@ -38,9 +38,6 @@ export const MyGiftsScreen: React.FC<MyGiftsScreenProps> = ({ gifts, userEmail, 
                                     <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shadow-sm border border-neutral-200 dark:border-neutral-700 flex-shrink-0 transition-transform group-hover:scale-105" style={{ backgroundImage: `url("${gift.imageUrl}")` }} />
                                     <div className="flex flex-col flex-1 min-w-0">
                                         <p className="text-neutral-900 dark:text-neutral-50 text-lg font-bold leading-tight truncate font-serif group-hover:text-primary/70">{gift.name}</p>
-                                        <p className="text-neutral-900 dark:text-neutral-200 text-[12px] font-extrabold mt-1 uppercase tracking-tighter">
-                                            R$ {gift.price.toFixed(2).replace('.', ',')}
-                                        </p>
                                         <div className="flex items-center gap-4 mt-3">
                                             <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-primary dark:text-white underline underline-offset-4 decoration-neutral-300">
                                                 Ver detalhes

@@ -33,18 +33,6 @@ export const GiftDetailsScreen: React.FC<GiftDetailsScreenProps> = ({ gift, user
                 </div>
                 <div className="px-6 pt-8">
                     <h1 className="text-3xl font-medium tracking-tight leading-tight mb-2 serif-title text-neutral-900 dark:text-neutral-50">{gift.name}</h1>
-                    <div className="flex items-baseline justify-between mt-4">
-                        <p className="text-2xl font-bold tracking-tight text-primary dark:text-neutral-200">R$ {gift.price.toFixed(2).replace('.', ',')}</p>
-                        <a
-                            className="flex items-center gap-1 text-neutral-900 dark:text-neutral-100 text-[11px] font-bold uppercase tracking-tighter underline underline-offset-4 decoration-neutral-500"
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Ver na loja
-                            <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-                        </a>
-                    </div>
                     <div className="h-[1px] w-full bg-neutral-200 dark:bg-neutral-800 my-8" />
                 </div>
                 <div className="px-6">
