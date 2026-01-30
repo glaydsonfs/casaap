@@ -32,9 +32,12 @@ export default function App() {
                     id: g.id,
                     name: g.name,
                     imageUrl: g.image_url,
+                    images: g.images || [],
+                    color: g.color,
                     category: g.category,
                     reservedBy: g.reserved_by,
-                    reservationMessage: g.reservation_message
+                    reservationMessage: g.reservation_message,
+                    purchaseUrl: g.purchase_url
                 }));
                 setGifts(mappedGifts);
             }

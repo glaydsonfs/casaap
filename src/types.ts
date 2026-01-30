@@ -8,6 +8,7 @@ export interface Gift {
     category: string;
     reservedBy?: string;
     reservationMessage?: string;
+    purchaseUrl?: string;
 }
 
 export type Screen = 'LOGIN' | 'REGISTRY' | 'DETAILS' | 'CONFIRMATION' | 'MY_GIFTS' | 'PROFILE';
