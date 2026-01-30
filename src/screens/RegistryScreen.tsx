@@ -43,7 +43,7 @@ export const RegistryScreen: React.FC<RegistryScreenProps> = ({ gifts, onSelect,
                                 className="group relative aspect-square overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm cursor-pointer"
                             >
                                 <div
-                                    className="h-full w-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="h-full w-full bg-center bg-no-repeat bg-contain bg-white dark:bg-neutral-800 transition-transform duration-500 group-hover:scale-105"
                                     style={{ backgroundImage: `url("${gift.imageUrl}")` }}
                                 />
                                 {gift.reservedBy && (
