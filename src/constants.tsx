@@ -3,45 +3,9 @@ import { Gift } from './types';
 
 export const INITIAL_GIFTS: Gift[] = [
     {
-        id: '1',
-        name: 'Conjunto de Pratos de Cerâmica Artesanal',
-        imageUrl: 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&q=80&w=800',
-        category: 'Cozinha',
-    },
-    {
-        id: '2',
-        name: 'Cafeteira Italiana Design',
-        imageUrl: 'https://images.unsplash.com/photo-1544194233-f7204f1a2384?auto=format&fit=crop&q=80&w=800',
-        category: 'Cozinha',
-    },
-    {
-        id: '3',
-        name: 'Vaso de Vidro Soprado',
-        imageUrl: 'https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&q=80&w=800',
-        category: 'Outros',
-    },
-    {
-        id: '4',
-        name: 'Jogo de Cama Linho Egípcio',
-        imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800',
-        category: 'Quarto',
-    },
-    {
-        id: '5',
-        name: 'Conjunto de Taças de Cristal',
-        imageUrl: 'https://images.unsplash.com/photo-1516132006923-6cf348e5dee2?auto=format&fit=crop&q=80&w=800',
-        category: 'Cozinha',
-    },
-    {
-        id: '6',
-        name: 'Difusor de Aromas Cerâmica',
-        imageUrl: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80&w=800',
-        category: 'Banheiro',
-    },
-    {
-        id: '7',
-        name: 'Jogo de Toalhas Fio Egípcio',
-        imageUrl: 'https://images.unsplash.com/photo-1583947581924-860bda6a26df?auto=format&fit=crop&q=80&w=800',
+        id: '8',
+        name: 'Espelho',
+        imageUrl: 'https://cdn.awsli.com.br/2500x2500/961/961619/produto/273516351/redondo-a-o-03vsu46e4l.png',
         category: 'Banheiro',
     },
 ];
